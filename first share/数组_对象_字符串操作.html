@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组&对象&字符串操作</title>
+</head>
+
+<body>
+    <!-- 数组 -->
+    <!-- 
+    concat()	连接两个或多个数组，并返回已连接数组的副本。
+    copyWithin()	将数组中的数组元素复制到指定位置或从指定位置复制。
+    entries()	返回键/值对数组迭代对象。
+    every()	检查数组中的每个元素是否通过测试。
+    fill()	用静态值填充数组中的元素。
+    filter()	使用数组中通过测试的每个元素创建新数组。
+    find()	返回数组中第一个通过测试的元素的值。
+    findIndex()	返回数组中通过测试的第一个元素的索引。
+    forEach()	为每个数组元素调用函数。
+    from()	从对象创建数组。
+    includes()	检查数组是否包含指定的元素。
+    indexOf()	在数组中搜索元素并返回其位置。
+    isArray()	检查对象是否为数组。
+    join()	将数组的所有元素连接成一个字符串。
+    keys()	返回 Array Iteration 对象，包含原始数组的键.
+    lastIndexOf()	在数组中搜索元素，从末尾开始，并返回其位置。
+    map()	使用为每个数组元素调用函数的结果创建新数组。
+    pop()	删除数组的最后一个元素，并返回该元素。
+    push()	将新元素添加到数组的末尾，并返回新的长度。
+    reduce()	将数组的值减为单个值（从左到右）。
+    reduceRight()	将数组的值减为单个值（从右到左）。
+    reverse()	反转数组中元素的顺序。
+    shift()	删除数组的第一个元素，并返回该元素。
+    slice()	选择数组的一部分，并返回新数组。
+    some()	检查数组中的任何元素是否通过测试。
+    sort()	对数组的元素进行排序。
+    splice()	从数组中添加/删除元素。
+    toString()	将数组转换为字符串，并返回结果。
+    unshift()	将新元素添加到数组的开头，并返回新的长度。
+    valueOf()	返回数组的原始值。 
+  -->
+    <!-- 字符串 -->
+    <!-- 
+    charAt()	返回指定索引位置的字符
+    charCodeAt()	返回指定索引位置字符的 Unicode 值
+    concat()	连接两个或多个字符串，返回连接后的字符串
+    fromCharCode()	将指定的 Unicode 值转换为字符串
+    indexOf()	返回字符串中检索指定字符第一次出现的位置
+    lastIndexOf()	返回字符串中检索指定字符最后一次出现的位置
+    localeCompare()	用本地特定的顺序来比较两个字符串
+    match()	找到一个或多个正则表达式的匹配
+    replace()	替换与正则表达式匹配的子串
+    search()	检索与正则表达式相匹配的值
+    slice()	提取字符串的片断，并在新的字符串中返回被提取的部分
+    split()	把字符串分割为子字符串数组
+    substr()	从起始索引号提取字符串中指定数目的字符
+    substring()	提取字符串中两个指定的索引号之间的字符
+    toLocaleLowerCase()	根据主机的语言环境把字符串转换为小写
+    toLocaleUpperCase()	根据主机的语言环境把字符串转换为大写
+    toLowerCase()	把字符串转换为小写
+    toString()	返回字符串对象值
+    toUpperCase()	把字符串转换为大写
+    trim()	移除字符串首尾空白
+    valueOf()	返回某个字符串对象的原始值 
+  -->
+</body>
+
+</html>
+<script>
+    (function() {
+        let str = "我是字符串";
+        // console.log('split', str.split(""));
+        // console.log('substr', str.substr(1, 2));
+        // console.log('substring', str.substring(1, 2));
+        let obj = {
+            name: 'ES6标准入门',
+            price: 30,
+        };
+        // const fieldName = "name";
+        // console.log(obj[fieldName]);
+        // console.log(obj.name);
+
+        // obj.name = "vue.js";
+
+        // obj.author = "阮一峰";
+        // delete obj.name;
+        // console.log(obj);
+        let arr = [{
+            name: "vue.js",
+            price: 40
+        }, {
+            name: "ES6标准入门",
+            price: 30
+        }];
+
+        // 会改变原数组的 
+        // push pop unshift shift splice reverse sort
+        // console.log() find join toString slice map splice
+        // arr.splice(index,length, newValue)
+        // arr.splice(0, 1)
+        // arr.splice(0, 0, {
+        //     name: 'JavaScript',
+        //     price: 10
+        // })
+        // console.log(arr)
+    })()
+</script>
