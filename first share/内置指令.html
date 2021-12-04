@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内置指令</title>
+</head>
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        <!-- 文本绑定指令 -->
+        <div>
+            <span v-html="html"></span> |
+            <span v-text="text"></span> |
+            <span>{{ html }}</span> |
+            <span>{{ text }}</span>
+        </div>
+        <!-- 
+      6. 表单绑定 v-html 只对于表单元素 input form textarea checkbox radio select
+     -->
+        <!-- 表单绑定 -->
+        <div>
+            <input v-model="count" type="text" />
+        </div>
+        <!-- 条件判断指令 -->
+        <div>
+            <span v-if="count > 20">vIf</span>
+            <span v-show="count > 20">vShow</span>
+        </div>
+        <!-- 循环指令 -->
+        <ul>
+            <li v-for="(item, index) in bookList">
+                {{ index }}. {{ item.name }}----{{ item.price }}元
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(value, key, index) in bookInfo">
+                {{ index }}. {{ key }}：{{ value }}
+            </li>
+        </ul>
+        <!-- 属性绑定指令 -->
+        <div><img :src="imgSrc" alt="lifecycle" width="100" /></div>
+        <!-- 事件绑定指令 -->
+        <!-- @click="outClick" -->
+        <div style="border: solid 1px #ccc;padding: 7px;">
+            <button @click.stop="innerClick">.stop</button>
+            <a href="www.baidu.com" target="_blank" @click.prevent="handlePrevent">.prevent</a>
+            <button @click.once="handleOnce">.once</button>
+            <input type="text" @keyup.enter="handleEnter" />
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            html: "<a href='http://www.xxx.com'>dom</a>",
+            text: '第一次分享',
+            count: 21,
+            bookList: [{
+                name: "vue.js",
+                price: 40
+            }, {
+                name: "ES6标准入门",
+                price: 30
+            }],
+            bookInfo: {
+                name: 'ES6标准入门',
+                price: 30,
+                author: '阮一峰',
+            },
+            imgSrc: "./image/lifecycle.png"
+        },
+        methods: {
+            outClick() {
+                console.log('outClick')
+            },
+            innerClick() {
+                console.log('innerClick')
+            },
+            handlePrevent() {
+                console.log('handlePrevent')
+            },
+            handleOnce() {
+                console.log('handleOnce')
+            },
+            handleEnter() {
+                console.log('handleEnter')
+            }
+        },
+        filters: {},
+        compute: {},
+        watch: {},
+    })
+</script>
