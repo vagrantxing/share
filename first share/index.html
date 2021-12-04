@@ -9,7 +9,44 @@
 </head>
 
 <body>
-
+    <!--  
+    一、VUE
+      渐进式JavaScript 框架
+      主张最少（用什么拿什么）
+      vuex vue-router webpack vue-loader
+    二、实例属性
+      1.el viewmodel 指定管理的范围（vue实例作用区域 相当于document.querySelect || document.getElementById）
+      2.data 页面抽离的data（数据模型）
+      3.methods 页面依赖方法 （函数编写区）
+      4.compute 计算属性（多个变量影响单个变量） 缓存
+      5.watch 监听 （单个变量影响多个变量）
+    三、生命周期
+      1. 创建期
+        beforeCreate 在实例初始化之后,进行数据侦听和事件/侦听器的配置之前同步调用
+        created 在实例创建完成后被立即同步调用
+      2. 挂载期
+        beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用
+        mounted 实例被挂载后调用
+      3. 更新期
+        beforeUpdate 在数据发生改变后，DOM 被更新之前被调
+        updated 在数据更改导致的虚拟 DOM 重新渲染和更新完毕之后被调用
+      4. 销毁期
+        beforeDestroy 实例销毁之前调用
+        destroyed 实例销毁后调用
+    四、内置指令
+      1. 文本绑定指令 v-html v-text {{ }}
+      2. 条件判断指令 v-if v-else-if v-else v-show
+      3. 循环指令 v-for (item,index) in array , (value,key,index) in object
+      4. 属性绑定 v-bind 简写 :
+      5. 事件绑定 v-on 简写 @
+          常见修饰符 .stop .prevent .once .enter
+      6. 表单绑定 v-html 只对于表单元素 input form textarea checkbox radio
+    五、跨页签通讯
+        sessionstorage localstorage cookie
+    六、数组的操作
+    七、对象的操作
+    八、字符串的操作
+  -->
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实例属性</title>
+</head>
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        <div>{{ message }} </div>
+        <div>{{ message | filterMessage }} </div>
+        <div>{{ text }} </div>
+        <div><input v-model="inputValue" type="text" /></div>
+    </div>
+</body>
+
+</html>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            message: '第一次分享',
+            text: '123,456',
+            inputValue: ''
+        },
+        methods: {
+            changeMessage() {
+                console.log(this.message)
+            }
+        },
+        filters: {
+            filterMessage(val) {
+                return '第二次分享'
+            }
+        },
+        compute: {
+            reversedText: function() {
+                return this.text.split(',').join('-')
+            }
+        },
+        watch: {
+            inputValue: function(newVal, oldVal) {
+                console.log('newVal', newVal)
+                console.log('oldVal', oldVal)
+            }
+        },
+    })
+</script>
