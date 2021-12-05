@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE CLI</title>
+</head>
+
+<body>
+    <!-- 
+      ##配置node
+        一、下载node.js 
+          https://nodejs.org/zh-cn/download/ 
+        二、配置环境变量
+          计算机右键属性----高级系统设置----环境变量 添加配置：
+          PATH = nodejs安装目录
+        三、验证nodejs环境是否成功
+          node -v
+        四、npm介绍
+          node package manager nodejs包管理工具
+        五、配置npm下载依赖位置
+          #设置npm安装程序时的默认位置
+          npm config set prefix "D:\nodejs\node_global"
+          #设置npm安装程序时的缓存位置
+          npm config set cache "D:\nodejs\node_cache"
+        六、配置淘宝镜像
+          npm config set registry http://registry.npm.taobao.org/ (https://registry.npmjs.org/)
+          npm install -g cnpm --registry=https://registry.npm.taobao.org
+        七、验证nodejs环境配置
+          npm config ls
+      ##安装脚手架
+        一、Vue Cli官网地址
+          https://cli.vuejs.org/zh/guide/
+        二、卸载脚手架
+          npm uninstall vue-cli -g 卸载2.0版本脚手架
+          npm uninstall @vue/cli -g 卸载2.0版本脚手架
+        三、安装脚手架
+          npm install vue-cli -g 安装2.0版本脚手架
+          npm install @vue/cli -g 安装2.0版本脚手架
+      ##创建脚手架项目
+        一、创建项目
+          vue init webpack 项目名
+        二、项目目录
+          VueCliExample   ---- 项目名
+            build   ---------- 使用webpack打包使用build依赖
+            config    -------- 做整个项目配置目录
+            node_modules  ---- 用来管理项目中使用依赖
+            src     ---------- 书写vue的源代码
+              assets    ------ 存放静态资源
+              components  ---- 书写Vue组件
+              router   ------- 配置项目中的路由
+              App.vue  ------- 项目中根组件
+              main.js  ------- 项目中入口文件
+            static    -------- 其他静态资源
+            .babelrc  -------- 将es6语法转为es5运行
+            .editorconfig  --- 项目编辑配置
+            .gitignore    ---- git版本控制忽略文件
+            .postcssrc.js ---- 源码相关js
+            index.html    ---- 项目主页
+            package.json  ---- 依赖管理
+            pack-lock.json  -- 对package.json加锁
+            README.md   ------ 项目说明文件
+        三、在项目根目录中运行
+          npm start （npm run dev）
+        四、访问项目
+          http://localhost:8080
+      -->
+</body>
+
+</html>
