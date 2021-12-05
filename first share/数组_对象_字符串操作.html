@@ -77,8 +77,11 @@
         // console.log('substring', str.substring(1, 2));
         let obj = {
             name: 'ES6标准入门',
-            price: 30,
+            count: 30,
         };
+        // Object.keys(obj).map((key, index) => {
+        //         console.log(key)
+        //     })
         // const fieldName = "name";
         // console.log(obj[fieldName]);
         // console.log(obj.name);
@@ -90,12 +93,11 @@
         // console.log(obj);
         let arr = [{
             name: "vue.js",
-            price: 40
+            count: 40
         }, {
             name: "ES6标准入门",
-            price: 30
+            count: 30
         }];
-
         // 会改变原数组的 
         // push pop unshift shift splice reverse sort
         // console.log() find join toString slice map splice
@@ -103,8 +105,15 @@
         // arr.splice(0, 1)
         // arr.splice(0, 0, {
         //     name: 'JavaScript',
-        //     price: 10
+        //     count: 10
         // })
+        // let newArr = arr.map((item, index) => {
+        //         return {
+        //             newName: item.name,
+        //             newCount: item.count
+        //         }
+        //     })
         // console.log(arr)
+        // console.log(newArr)
     })()
 </script>

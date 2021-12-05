@@ -33,7 +33,7 @@
         <!-- 循环指令 -->
         <ul>
             <li v-for="(item, index) in bookList">
-                {{ index }}. {{ item.name }}----{{ item.price }}元
+                {{ index }}. {{ item.name }}----{{ item.count }}元
             </li>
         </ul>
         <ul>
@@ -64,14 +64,14 @@
             count: 21,
             bookList: [{
                 name: "vue.js",
-                price: 40
+                count: 40
             }, {
                 name: "ES6标准入门",
-                price: 30
+                count: 30
             }],
             bookInfo: {
                 name: 'ES6标准入门',
-                price: 30,
+                count: 30,
                 author: '阮一峰',
             },
             imgSrc: "./image/lifecycle.png"
